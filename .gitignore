@@ -1,0 +1,25 @@
+# Java classes and build directories
+*.class
+/build/
+/bin/
+/out/
+/target/
+
+# IDEs
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+# Web deployables
+*.war
+*.ear
+
+# Logs and temp
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db

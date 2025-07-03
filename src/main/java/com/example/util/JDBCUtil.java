@@ -1,14 +1,11 @@
 package com.example.util;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Properties;
 
 public class JDBCUtil {
 
@@ -17,16 +14,18 @@ public class JDBCUtil {
 
 	public static Connection getConnection() throws SQLException, IOException {
 
-		String filePath = "src\\main\\java\\com\\example\\properties\\application.properties";
-		File file = new File(filePath);
-		FileInputStream inputStream = new FileInputStream(file);
+		 String jdbcUrl = "jdbc:mysql://localhost:3306/javafsdcourse";
+//		String jdbcUrl = "jdbc:mysql:///javafsdcourse";
+		String userName = "root";
+		String password = "root";
 
-		Properties properties = new Properties();
-		properties.load(inputStream);
-
-		Connection connection = DriverManager.getConnection(properties.getProperty("url"),
-				properties.getProperty("userName"), properties.getProperty("password"));
-
+		System.out.println(jdbcUrl + userName + password);
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		Connection connection = DriverManager.getConnection(jdbcUrl, userName, password);
 		return connection;
 	}
 

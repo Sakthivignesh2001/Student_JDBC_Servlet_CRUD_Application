@@ -16,8 +16,8 @@ public class TestApp {
 
 	}
 
-	public List<Student> getAllStudentDetails() {
+	public String getAllStudentDetails() {
 		StudentDao studentService = StudentDaoFactory.getStudentDao();
-		return studentService.getAllStudentDetails();
+		return studentService.deleteStudentDetailById(10);
 	}
 }

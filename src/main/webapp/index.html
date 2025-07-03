@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home page</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: skyblue;
+        font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        color: red;
+        text-align: center;
+    }
+
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: white;
+    }
+
+    th, td {
+        padding: 10px 15px;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        padding: 5px 10px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h2>Welcome to the Student Management Portal</h2>
+</header>
+
+<main>
+    <h1>Student Details Operation</h1>
+    <table>
+        <tr>
+            <th>Get all student details</th>
+            <td>
+                <form action="./controller/getAllDetails" method="post">
+                    <input type="submit" value="click here" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>Get student detail by ID</th>
+            <td>
+                <form action="./getDetailsById.html" method="post">
+                    <input type="submit" value="click here" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>Insert student detail</th>
+            <td>
+                <form action="./insertDetail.html" method="post">
+                    <input type="submit" value="click here" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>Update student detail by ID</th>
+            <td>
+                <form action="./updateDetailsById.html" method="post">
+                    <input type="submit" value="click here" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>Delete student detail by ID</th>
+            <td>
+                <form action="./deleteDetailsById.html" method="post">
+                    <input type="submit" value="click here" />
+                </form>
+            </td>
+        </tr>
+    </table>
+</main>
+
+<footer>
+    <p>&copy; 2025 Student Management Inc. | Contact: studentmanagement@gmail.com</p>
+</footer>
+
+</body>
+</html>

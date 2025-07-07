@@ -210,6 +210,8 @@ public class StudentDaoImpl implements StudentDao {
 
 		} catch (SQLException | IOException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			try {
 				JDBCUtil.cleanUp(connection, preparedStatement, resultSet);
